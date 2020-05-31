@@ -1,3 +1,3 @@
-const ports = { server: { port: 3333 } };
+const ports = { server: { port: 4444 } };
 
 module.exports = ports;

@@ -4,14 +4,15 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const controller = require("./controller/controller");
 const { server } = require("./ports/port");
-const { home } = require("./router/route");
 
 app.use(express.static("public"));
 app.use(cors());
 app.use(bodyParser.json());
 
-app.get(home, controller.getHola);
+app.get("/", (req, res) => {
+  controller.getSession;
+});
 
-app.listen(server.ports, () =>
+app.listen(server.port, () =>
   console.log("Servidor corriendo en el puerto: " + server.port)
 );
